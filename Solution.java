@@ -2,9 +2,10 @@ package main.vigenereCipher;
 
 import java.util.Scanner;
 
-public class Challenge {
+public class Solution {
 
   public static void main(String[] args) {
+    
     Scanner scanner = new Scanner(System.in);
     String text = scanner.nextLine();
     String keyword = scanner.nextLine();
@@ -15,19 +16,22 @@ public class Challenge {
   }
 
   /**
-   * If the input text is the original plain text, finds the cipher text. The condition of the
-   * challenge assume that if the input text is the original plain text, it will contain punctuation
-   * marks and spaces.
+   * 1. If the input text is the original plain text, finds the cipher text. 
+   * 
+   * 1.1 The conditions of the challenge assume that if the input text is the original plain text, 
+   *     then it will contain punctuation marks and spaces.
    *
-   * <p>If the input text is the cipher text, finds the original plain text. The condition of the
-   * challenge assume that if the input text is the cipher text, it will contain only capital
-   * letters. The original plain text, as per the challenge conditions, is returned without
-   * punctuation marks and without spaces.
+   * 2. If the input text is the cipher text, finds the original plain text. 
+   *
+   * 2.1 The conditions of the challenge assume that if the input text is the cipher text, 
+   *     then it will contain only capital letters. 
+   *
+   * 2.2 The original plain text, as per the challenge conditions, is returned
+   *     in capital letters, without punctuation marks and without spaces.
    *
    * @return The origial plain text or the cipher text, depending on the input.
    */
-  public static String vigenereDecode_plainToCipherText_cipherToPlainText(
-      String text, String keyword) {
+  public static String vigenereDecode_plainToCipherText_cipherToPlainText(String text, String keyword) {
 
     int startLength = text.length();
     text = text.replaceAll("[^a-zA-Z]", "").toUpperCase();
