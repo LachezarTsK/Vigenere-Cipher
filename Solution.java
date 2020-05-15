@@ -80,11 +80,11 @@ public class Solution {
     return plain_text.toString();
   }
 
-  private static char findCipherChar(char ch_text, char ch_keyword) {
+  private static char findCipherChar(char char_text, char char_keyword) {
 
-    int shifts_ch_text = (int) ch_text - (int) 'A';
-    int position_ch_keyword = (int) ch_keyword - (int) 'A';
-    int position_cipher = shifts_ch_text + position_ch_keyword;
+    int shifts_char_text = (int) char_text - (int) 'A';
+    int position_char_keyword = (int) char_keyword - (int) 'A';
+    int position_cipher = shifts_char_text + position_char_keyword;
 
     if (position_cipher < 26) {
       return (char) ((int) 'A' + position_cipher);
