@@ -1,5 +1,3 @@
-package main.vigenereCipher;
-
 import java.util.Scanner;
 
 public class Solution {
